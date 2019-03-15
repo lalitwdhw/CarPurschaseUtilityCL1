@@ -127,12 +127,14 @@ public class Admin {
             }
 
             if (isInvalidCar) {
-                continue;
+                flag = "y";
             }
-
-            System.out.println("Does the customer has more cars \n");
-            System.out.println("Enter \'Y\' for yes, else enter anything\n");
-            flag = new Scanner(System.in).next().toLowerCase();
+            else
+            {
+                System.out.println("Does the customer has more cars \n");
+                System.out.println("Enter \'Y\' for yes, else enter anything\n");
+                flag = new Scanner(System.in).next().toLowerCase();
+            }
         }
         while(flag.equals("y"));
         return mCustomerCars;
